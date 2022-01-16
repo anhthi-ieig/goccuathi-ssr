@@ -1,0 +1,52 @@
+.navigator {
+  @include scoped-content;
+
+  width: 100%;
+  min-height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-bg;
+  z-index: $z-index-800;
+
+  &.fixed {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .short-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .mobile-menu,
+      .change-theme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: $color-text;
+        border: none;
+        font-size: $text-medium;
+        outline: none;
+        cursor: pointer;
+        margin-left: 8px;
+      }
+
+      .mobile-menu {
+        display: none;
+
+        @include screen-md-down {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

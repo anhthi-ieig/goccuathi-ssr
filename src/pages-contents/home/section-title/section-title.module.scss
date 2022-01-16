@@ -1,0 +1,47 @@
+.section-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 90px 0 100px;
+
+  &.in-dark-bg {
+    .title {
+      svg {
+        fill: $color-white;
+      }
+
+      h2 {
+        color: $color-white;
+      }
+    }
+
+    .description {
+      color: $color-white;
+    }
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin-right: 10px;
+    }
+
+    h2 {
+      text-transform: capitalize;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: $text-large;
+    }
+  }
+
+  .description {
+    opacity: 0.8;
+    font-size: $text-medium;
+    margin-top: 8px;
+  }
+}

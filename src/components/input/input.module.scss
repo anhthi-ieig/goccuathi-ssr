@@ -1,0 +1,36 @@
+.input-wrapper {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0 2px;
+
+  .label {
+    @include label;
+
+    .asterisk {
+      @include asterisk;
+    }
+  }
+
+  .input {
+    width: 100%;
+    min-height: $element-height;
+    border: 1px solid $color-border;
+    border-radius: $element-border-radius;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    font-size: $text-medium;
+    color: $color-text;
+    outline: none;
+    resize: vertical;
+    transition-duration: 0.3s;
+
+    &:focus,
+    &:focus-visible {
+      @include focus-border;
+    }
+  }
+
+  .error-desc {
+    @include error-desc;
+  }
+}

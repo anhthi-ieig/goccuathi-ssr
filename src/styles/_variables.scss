@@ -2,45 +2,25 @@
  * Colors
  */
 
-$color-primary: #f44e27;
-$color-secondary: #6923f4;
-$color-bg: #fafbfc;
-$color-text: #3c4043;
-$color-description: #616569;
-$color-border: #e1e5eb;
-$color-border-shadow: #f0f2f3;
-
+$color-primary: #ff6f91;
+$color-primary-dark: #c45c74;
+$color-bg: #f8f9f9;
+$color-text: #212f3c;
+$color-border: rgba(0, 0, 0, 0.14);
+$color-line: rgba(0, 0, 0, 0.1);
+$color-dark: #212f3d;
 $color-white: #ffffff;
 $color-black: #000000;
-$color-gray-0: #f4f2ff;
-$color-gray-200: #e4e6eb;
-$color-gray-400: #9d9faf;
-$color-gray-600: #6a6d7d;
-$color-gray-800: #3c3847;
-$color-red-light: #ff9387;
-$color-red-dark: #e74c3c;
-$color-violet: #8857fa;
-$color-blue: #35b8f0;
-$color-green: #00b16a;
-$color-green-sea: #37b88f;
-$color-bronze: #9e9828;
+$color-red: #cb4335;
 
 /*
- * Font Sizes
+ * Sizes
  */
 
-$text-small: 0.75rem;
+$text-small: 0.7rem;
 $text-medium: 0.9rem;
-$text-semi-large: 1rem;
-$text-large: 1.1rem;
-$text-semi-huge: 1.2rem;
-$text-huge: 1.35rem;
-
-/*
- * Font Family
- */
-
-$font-family: 'Inter', Arial, Helvetica, sans-serif;
+$text-large: 1.35rem;
+$text-huge: 1.9rem;
 
 /*
  * Shape
@@ -48,7 +28,6 @@ $font-family: 'Inter', Arial, Helvetica, sans-serif;
 
 $element-height: 44px;
 $element-border-radius: 4px;
-$border-width: 2px;
 
 /*
  * z-index
@@ -56,6 +35,6 @@ $border-width: 2px;
 
 $z-index-200: 200;
 $z-index-400: 400;
-$z-index-600: 600;
-$z-index-800: 800;
+$z-index-600: 500;
+$z-index-800: 600;
 $z-index-latest: 1000;

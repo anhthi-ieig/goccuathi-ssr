@@ -1,0 +1,127 @@
+/*  
+ * Components
+ */
+
+@mixin label {
+  display: block;
+  font-size: $text-medium;
+  font-weight: 400;
+  margin: 0 0 3px 1px;
+}
+
+@mixin asterisk {
+  color: $color-red;
+  margin-left: 4px;
+}
+
+@mixin error-desc {
+  font-size: $text-small;
+  color: $color-red;
+  margin: 0 0 0 1px;
+}
+
+/*  
+ * Colors
+ */
+
+@mixin bg-gradient {
+  background-image: linear-gradient(to right top, #ff6f91, #ea5c8d, #d44a89, #bd3985, #a52981);
+}
+
+@mixin focus-border {
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 0.15rem rgb($color-primary, 40%);
+}
+
+@mixin box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+/*  
+ * Responsive
+ */
+
+@mixin screen-xs-down {
+  @media (max-width: 339.98px) {
+    @content;
+  }
+}
+
+@mixin screen-xs-up {
+  @media (min-width: 340px) {
+    @content;
+  }
+}
+
+@mixin screen-sm-down {
+  @media (max-width: 479.98px) {
+    @content;
+  }
+}
+
+@mixin screen-sm-up {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin screen-md-down {
+  @media (max-width: 834.98px) {
+    @content;
+  }
+}
+
+@mixin screen-md-up {
+  @media (min-width: 835px) {
+    @content;
+  }
+}
+
+@mixin screen-lg-up {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin screen-lg-down {
+  @media (max-width: 1024.98px) {
+    @content;
+  }
+}
+
+@mixin screen-xl-down {
+  @media (max-width: 1366.98px) {
+    @content;
+  }
+}
+
+@mixin screen-xl-up {
+  @media (min-width: 1367px) {
+    @content;
+  }
+}
+
+/*  
+ * Layouts
+ */
+
+@mixin scoped-content {
+  padding-left: 14vw;
+  padding-right: 14vw;
+  overflow-x: hidden;
+
+  @include screen-xl-down {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include screen-lg-down {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include screen-xs-down {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}

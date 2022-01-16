@@ -1,0 +1,47 @@
+.menu {
+  &.in-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include screen-md-down {
+      display: none;
+    }
+
+    .menu-item {
+      margin-left: 12px;
+    }
+  }
+
+  &.in-mobile {
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+
+    @include screen-md-up {
+      display: none;
+    }
+
+    .menu-item {
+      margin: 10px 0;
+      font-weight: 500;
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: $color-text;
+    border: none;
+    font-size: $text-medium;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+  }
+}

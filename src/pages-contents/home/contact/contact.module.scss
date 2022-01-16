@@ -1,0 +1,46 @@
+.contact-me {
+  @include scoped-content;
+
+  padding-bottom: 80px;
+
+  .keep-in-touch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .contacts {
+      width: 100%;
+      max-width: 400px;
+
+      .contact {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10px 0;
+
+        .icon {
+          margin-right: 14px;
+
+          svg {
+            fill: $color-primary;
+          }
+        }
+
+        .info {
+          .type {
+            margin: 0 0 -6px 0;
+          }
+
+          .value {
+            margin-top: 4px;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    .send-message {
+      flex-grow: 1;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.milestone {
+  position: relative;
+
+  .company-name {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    background-color: $color-primary;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: $z-index-200;
+  }
+
+  .milestone {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1 1 100%;
+
+    .type-section,
+    .detail-section {
+      max-width: 50%;
+      width: 50%;
+      padding-top: 20px;
+      padding-bottom: 60px;
+
+      .type {
+        margin: 0;
+        font-size: $text-medium;
+        font-weight: 600;
+        opacity: 0.7;
+      }
+
+      .detail {
+        margin: 0;
+        font-size: $text-medium;
+        opacity: 0.8;
+      }
+    }
+
+    .type-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      border-right: 1px solid $color-border;
+      padding-right: 30px;
+    }
+
+    .detail-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      border-left: 1px solid $color-border;
+      padding-left: 30px;
+    }
+  }
+}

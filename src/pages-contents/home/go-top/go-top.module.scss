@@ -1,0 +1,37 @@
+@keyframes go-top-animation {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+
+.go-top {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: go-top-animation 1s;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 4px;
+  background-color: $color-dark;
+  color: $color-white;
+  border: none;
+  cursor: pointer;
+
+  .icon {
+    svg {
+      fill: $color-white;
+    }
+  }
+
+  @include screen-md-down {
+    width: 36px;
+    height: 36px;
+    right: 14px;
+  }
+}

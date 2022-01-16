@@ -1,0 +1,37 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-latest;
+
+  &.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-wrapper {
+    min-width: 240px;
+    min-height: 200px;
+    position: relative;
+    background-color: $color-white;
+    border-radius: 8px;
+    margin: -40px 14px 14px;
+    padding: 14px;
+
+    .close {
+      position: absolute;
+      top: 4px;
+      right: 10px;
+
+      svg {
+        fill: rgba($color-black, 0.4);
+      }
+    }
+  }
+}

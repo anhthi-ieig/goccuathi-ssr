@@ -1,0 +1,106 @@
+.dropdown {
+  position: relative;
+  margin-bottom: 18px;
+  padding: 0 2px;
+
+  .label {
+    @include label;
+
+    .asterisk {
+      @include asterisk;
+    }
+  }
+
+  .selected-option {
+    min-height: $element-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $element-border-radius;
+    font-size: $text-medium;
+    color: $color-text;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+
+    &.open {
+      @include focus-border;
+    }
+
+    .content {
+      flex-grow: 1;
+      overflow: hidden;
+      max-height: 26px;
+      margin-bottom: 0;
+      margin-right: 22px;
+    }
+
+    .arrow {
+      width: 20px;
+      margin-left: 10px;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .overlay-options {
+    min-width: 100%;
+    max-height: 200px;
+    display: none;
+    position: absolute;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px 0 $color-border;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: $z-index-400;
+
+    &.open {
+      max-height: 300px;
+      display: flex;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    &.top {
+      bottom: 54px;
+    }
+
+    &.bottom {
+      top: 84px;
+    }
+
+    ul {
+      width: 100%;
+      padding: 6px 0;
+      margin: 0;
+
+      li {
+        .option {
+          min-height: 36px;
+          display: flex;
+          align-items: center;
+          padding: 5px 11px;
+          font-size: $text-medium;
+          transition-duration: 0.2s;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  .error-desc {
+    @include error-desc;
+  }
+}

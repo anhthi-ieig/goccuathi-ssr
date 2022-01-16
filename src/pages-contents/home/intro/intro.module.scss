@@ -1,0 +1,134 @@
+@keyframes scroll-down-animation {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.intro {
+  @include scoped-content;
+
+  min-height: calc(100vh - 70px);
+  margin-top: 70px;
+
+  .personal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 16vh;
+
+    .social-networks {
+      min-width: 10vw;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 15vh;
+
+      .network {
+        margin: 12px 0;
+        cursor: pointer;
+
+        svg {
+          fill: $color-primary;
+          transition-duration: 0.2s;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .iam {
+      flex-grow: 1;
+      margin-top: 12.5vh;
+
+      .name {
+        margin-bottom: 12px;
+        font-size: $text-huge;
+        line-height: 2.35rem;
+        opacity: 1;
+      }
+
+      .position {
+        opacity: 0.8;
+        margin-bottom: 16px;
+      }
+
+      .detail {
+        text-align: left;
+      }
+
+      .read-more {
+        margin-top: 30px;
+
+        svg {
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+    }
+
+    .avatar {
+      padding-left: 80px;
+      margin-top: 12.5vh;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    @include screen-md-down {
+      flex-wrap: wrap;
+
+      .social-networks {
+        order: 1;
+        margin-top: 18vh;
+      }
+
+      .iam {
+        order: 3;
+      }
+
+      .avatar {
+        order: 2;
+        flex-grow: 1;
+        padding-left: 40px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    @include screen-sm-down {
+      .avatar {
+        img {
+          width: 200px;
+          margin-top: 40px;
+        }
+      }
+
+      .iam {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .scroll-down {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    color: $color-text;
+    opacity: 0.8;
+    cursor: pointer;
+
+    .arrow {
+      animation: scroll-down-animation 1.2s infinite;
+    }
+  }
+}

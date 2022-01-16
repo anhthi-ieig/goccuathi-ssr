@@ -1,7 +1,9 @@
-import type { NextPage } from 'next';
+import { NextPage } from 'next';
+
+import HomeContent from 'pages-contents/home';
 
 const Home: NextPage = () => {
-  return <div>Hello Home</div>;
+  return <HomeContent />;
 };
 
 export default Home;
