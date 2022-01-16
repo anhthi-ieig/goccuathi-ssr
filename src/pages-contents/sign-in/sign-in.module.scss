@@ -1,0 +1,45 @@
+.sign-in {
+  @include bg-gradient;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .wrapper {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 24px;
+    margin: -20px 18px 0;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    background-color: $color-bg;
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .button {
+      margin: 9px 0;
+
+      .icon {
+        margin-right: 6px;
+
+        svg {
+          fill: $color-primary;
+        }
+      }
+    }
+
+    .or-sign-in-with {
+      font-size: 0.8rem;
+      margin: 8px 0;
+    }
+  }
+}

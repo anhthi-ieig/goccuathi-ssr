@@ -4,10 +4,6 @@ import Head from 'next/head';
 import 'styles/base.scss';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const renderApp = () => {
-    return <Component {...pageProps} />;
-  };
-
   return (
     <>
       <Head>
@@ -17,7 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta content="website" property="og:type" />
         <meta name="description" content="Goc cua Thi" />
       </Head>
-      {renderApp()}
+      <Component {...pageProps} />
     </>
   );
 };

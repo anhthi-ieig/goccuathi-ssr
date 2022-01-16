@@ -1,0 +1,24 @@
+.sidebar {
+  width: 270px;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+  position: relative;
+
+  .navigator-wrapper {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .back-to-home {
+    position: absolute;
+    bottom: 60px;
+    font-size: $text-small;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

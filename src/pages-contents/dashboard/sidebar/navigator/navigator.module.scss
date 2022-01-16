@@ -1,0 +1,25 @@
+.navigator {
+  width: 100%;
+  height: 46px;
+  padding: 0 10px 0 34px;
+  transition-duration: 0.2s;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  border-left: 6px solid transparent;
+  opacity: 0.8;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    border-left-color: $color-primary-dark;
+  }
+
+  .icon {
+    margin-right: 20px;
+    opacity: 0.8;
+  }
+}

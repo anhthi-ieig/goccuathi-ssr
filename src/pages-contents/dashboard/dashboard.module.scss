@@ -1,0 +1,39 @@
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .side-bar-wrapper {
+    background-color: $color-bg;
+    border-right: 1px solid rgba(0, 0, 0, 0.02);
+  }
+
+  .content-wrapper {
+    height: auto;
+    min-height: 100vh;
+    flex-grow: 1;
+    padding: 0 22px 60px;
+    background-color: $color-white;
+
+    .status-bar {
+      height: 60px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 40px;
+      margin-bottom: 60px;
+
+      .icon {
+        cursor: pointer;
+        transition-duration: 0.1s;
+        opacity: 0.6;
+        margin: 0 10px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}

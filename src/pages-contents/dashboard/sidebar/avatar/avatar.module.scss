@@ -1,0 +1,17 @@
+.avatar {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dark;
+  color: $color-white;
+  border-radius: 50%;
+  font-size: 1.08rem;
+}
+
+.name {
+  margin-top: 12px;
+  font-size: $text-medium;
+  font-weight: 500;
+}
