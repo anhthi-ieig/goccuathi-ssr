@@ -7,7 +7,7 @@
         "lodash": {
           "transform": "lodash/${member}",
           "preventFullImport": true
-        },
+        }
       }
     ]
   ]

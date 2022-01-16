@@ -1,6 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withBundleStats = require('next-plugin-bundle-stats');
 
-module.exports = nextConfig
+const webpackConfigFn = require('./config/webpack/webpack.config');
+
+module.exports = withBundleStats()({
+  reactStrictMode: true,
+  useFileSystemPublicRoutes: false,
+  webpack: webpackConfigFn,
+  sassOptions: {
+    prependData: `
+      @import "/src/styles/_variables.scss";
+      @import "/src/styles/_mixins.scss";
+    `,
+  },
+});

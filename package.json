@@ -5,9 +5,14 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "start": "node src/server.js",
     "build": "next build",
-    "prod-local": "npm run build && NODE_ENV=production npm run start"
+    "prod-local": "npm run build && NODE_ENV=production npm run start",
+    "format-ts": "prettier 'src/**/*.{ts,tsx,js}' --write",
+    "format-scss": "stylelint src/**/*.scss --fix",
+    "lint": "eslint src --ext .ts,.tsx,.js --fix",
+    "clean": "npm run format-ts && npm run format-scss && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -40,7 +45,25 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.7",
+    "next-plugin-bundle-stats": "^3.2.3",
+    "postcss": "^8.4.5",
+    "postcss-scss": "^4.0.3",
     "prettier": "^2.5.1",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-scss": "^4.1.0",
+    "stylelint-webpack-plugin": "^3.1.1",
     "typescript": "4.5.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.scss": [
+      "stylelint"
+    ]
   }
 }
