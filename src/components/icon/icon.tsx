@@ -16,7 +16,7 @@ const Icon: React.FC<IIconProps> = (props) => {
       className={cx(styles.icon, className)}
       onClick={() => onClick()}
     >
-      <SVG src={`/svgs/${icon}`} width={width} height={height} />
+      <SVG src={`/static/icons/${icon}`} width={width} height={height} />
     </span>
   );
 };

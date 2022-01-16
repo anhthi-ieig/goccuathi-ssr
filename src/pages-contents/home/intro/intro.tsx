@@ -93,7 +93,7 @@ const Intro: React.FC = () => {
 
   const renderAvatar = () => (
     <div className={styles.avatar}>
-      <img src="/src/assets/images/avatar.png" alt="Thi Nguyen" />
+      <img src="/static/images/avatar.png" alt="Thi Nguyen" />
     </div>
   );
 

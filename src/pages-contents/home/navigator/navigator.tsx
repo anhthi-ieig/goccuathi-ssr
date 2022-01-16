@@ -47,7 +47,7 @@ const Home: React.FC = () => {
    */
 
   const renderActionIcons = () => (
-    <div className={styles.shortIcons}>
+    <div className={styles['short-icons']}>
       <button type="button" className={styles['mobile-menu']} onClick={handleMobileMenuClick}>
         <Icon icon="function.svg" width="22px" height="22px" />
       </button>

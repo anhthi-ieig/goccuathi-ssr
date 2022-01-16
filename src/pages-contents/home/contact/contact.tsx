@@ -24,13 +24,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id={SectionIds.CONTACT} className={styles.contactMe}>
+    <div id={SectionIds.CONTACT} className={styles['contact-me']}>
       <SectionTitle
         icon="user-smile.svg"
         title="Contact me"
         description="Keep in touch with me via"
       />
-      <div className={styles.keepInTouch}>
+      <div className={styles['keep-in-touch']}>
         <div className={styles.contacts}>
           {renderContact({
             icon: 'phone.svg',
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             value: 'District 7, HCMC, Vietnam',
           })}
         </div>
-        <div className={styles.sendMessage}>Submit form</div>
+        <div className={styles['send-message']}>Submit form</div>
       </div>
     </div>
   );

@@ -13,8 +13,8 @@ const Menu: React.FC<IMenuProps> = (props) => {
   return (
     <span
       className={cx(styles.menu, {
-        [styles.inDesktop]: mode === MenuMode.IN_DESKTOP,
-        [styles.inMobile]: mode === MenuMode.IN_MOBILE,
+        [styles['in-desktop']]: mode === MenuMode.IN_DESKTOP,
+        [styles['in-mobile']]: mode === MenuMode.IN_MOBILE,
       })}
     >
       <button

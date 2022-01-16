@@ -12,7 +12,7 @@ const SectionTitle: React.FC<ISectionTitleProps> = (props) => {
   return (
     <div
       className={cx(styles['section-title'], {
-        [styles.inDarkBg]: isInDarkBg,
+        [styles['in-dark-bg']]: isInDarkBg,
       })}
     >
       <div className={styles.title}>
